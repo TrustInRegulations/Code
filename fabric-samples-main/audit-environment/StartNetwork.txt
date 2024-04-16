@@ -1,0 +1,9 @@
+wsl ubuntu
+
+cd /mnt/c/users/jacob/Blockchain/fabric-samples-main/test-network
+
+
+./network.sh up createChannel -c mychannel -ca -s couchdb
+
+
+./network.sh deployCC -ccn basic -ccp ../audit-environment/chaincode-javascript/ -ccl javascript

@@ -1,0 +1,30 @@
+/* styles.css */
+
+body {
+  padding-top: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #333; /* Ändere die Schriftfarbe der Links */
+}
+
+/* Füge benutzerdefinierte Stile für deine Seite hinzu */
+.container {
+  background-color: #f8f9fa; /* Hintergrundfarbe für den Container */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #007bff; /* Ändere die Farbe der Überschrift */
+  margin-bottom: 20px;
+}

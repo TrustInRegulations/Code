@@ -1,0 +1,51 @@
+[      
+    { 
+        "query": "getAudit",
+        "identity": "Org1Admin", 
+        "args": ["audit3"]   
+    },
+    {
+        "invoke": "createAudit",
+        "args": ["audit3445","companyId123","5","FileHashEvidence","Beschreibung", "01.01.2023", "1241312","05.01.2023", "4"]
+    },
+    {
+        "invoke": "checkIdentity",
+        "args": []
+    },
+    { 
+        "query": "getAuditsByRange",
+        "identity": "Org1Admin", 
+        "args": ["a", "z"]   
+    },
+    {
+        "invoke": "updateAudit",
+        "args": ["audit89","4","FileHashEvidence","Beschreibung", "01.01.2023", "1241312","05.01.2023"]
+    },
+    { 
+        "query": "getHistory",
+        "identity": "Org1Admin", 
+        "args": ["audit89"]   
+    },
+    { 
+        "query": "getHistoryByKey",
+        "args": ["audit3"]   
+    },
+    { 
+        "query": "getAllAudits",
+        "identity": "Org4Admin", 
+        "args": [""]   
+    },
+    { 
+        "invoke": "getCompanyScore",
+        "args": ["companyId123"]   
+    },
+    { 
+        "invoke": "updateEvidence",
+        "args": ["audit3", "5", "12345667"]
+    }
+    
+    
+    
+
+
+]

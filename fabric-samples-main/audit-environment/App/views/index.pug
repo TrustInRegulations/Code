@@ -1,0 +1,49 @@
+extends layout
+
+block content
+  nav(class="navbar navbar-expand-lg navbar-dark bg-dark")
+    .container-fluid
+      a(class="navbar-brand" href="#") Blockchain Based Audit Environment
+      button(class="navbar-toggler" type="button" 
+          data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" 
+          aria-label="Toggle navigation")
+        span(class="navbar-toggler-icon")
+      div(class="collapse navbar-collapse" id="navbarNavAltMarkup")
+        div(class="navbar-nav")
+          a(class="nav-link active" aria-current="page" href="#") Home
+          a(class="nav-link" id="createAuditLink" href="#") Create Audit
+          a(class="nav-link" href="#") Update Audit
+          a(class="nav-link" href="#") Set Deadline
+          a(class="nav-link" href="#") Rate Auditor
+          a(class="nav-link" href="#") View Ratings
+
+  .container.mt-3
+    .row
+      .col-md-6.offset-md-3
+        .card
+          .card-body
+            h4.card-title Create Audit
+            form
+              .mb-3
+                label(for="auditName" class="form-label") Audit Name
+                input(type="text" class="form-control" id="auditName" placeholder="Enter audit name")
+              .mb-3
+                label(for="auditScore" class="form-label") Audit Score
+                select(class="form-select" id="auditScore")
+                  option(value="1") 1
+                  option(value="2") 2
+                  option(value="3") 3
+                  option(value="4") 4
+                  option(value="5") 5
+                  option(value="6") 6
+              .mb-3
+                label(for="auditDate" class="form-label") Audit Date
+                input(type="date" class="form-control" id="auditDate")
+              .mb-3
+                label(for="auditDescription" class="form-label") Description
+                textarea(class="form-control" id="auditDescription" rows="3" placeholder="Enter audit description")
+              .mb-3
+                label(for="auditFile" class="form-label") Upload Audit File
+                input(type="file" class="form-control" id="auditFile")
+              button(type="submit" class="btn btn-primary" id="submitBtn") Submit

@@ -1,0 +1,208 @@
+swagger: '2.0'
+info:
+  version: '1.0.0'
+  title: Audit API
+paths:
+  /api/audit/{auditId}:
+    get:
+      summary: Get audit by ID
+      parameters:
+        - name: auditId
+          in: path
+          required: true
+          type: string
+      responses:
+        200:
+          description: Successful operation
+        500:
+          description: Internal Server Error
+  /api/audit/:
+    get:
+      summary: Get all audits
+      responses:
+        200:
+          description: Successful operation
+        500:
+          description: Internal Server Error
+    post:
+      summary: Create a new audit
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: auditData
+          description: Audit data
+          required: true
+          schema:
+            type: object
+            properties:
+              companyId:
+                type: string
+              deadline:
+                type: string
+      responses:
+        200:
+          description: Successful operation
+        500:
+          description: Internal Server Error
+  /api/audit/auditorScore/{auditorId}:
+    get:
+      summary: Get auditor score by ID
+      parameters:
+        - name: auditorId
+          in: path
+          required: true
+          type: string
+      responses:
+        200:
+          description: Successful operation
+        500:
+          description: Internal Server Error
+  /api/audit/companyScore/{companyId}:
+    get:
+      summary: Get audits by company score
+      parameters:
+        - name: companyId
+          in: path
+          required: true
+          type: string
+      responses:
+        200:
+          description: Successful operation
+        500:
+          description: Internal Server Error
+  /api/audit/history/{auditId}:
+    get:
+      summary: Get audit history by ID
+      parameters:
+        - name: auditId
+          in: path
+          required: true
+          type: string
+      responses:
+        200:
+          description: Successful operation
+        500:
+          description: Internal Server Error
+  /api/audit/companyScore/:
+    put:
+      summary: Update company score
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: scoreData
+          description: Score data
+          required: true
+          schema:
+            type: object
+            properties:
+              auditId:
+                type: string
+              score:
+                type: string
+      responses:
+        200:
+          description: Successful operation
+        500:
+          description: Internal Server Error
+  /api/audit/evidence/:
+    put:
+      summary: Update evidence
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: evidenceData
+          description: Evidence data
+          required: true
+          schema:
+            type: object
+            properties:
+              auditId:
+                type: string
+              evidence:
+                type: string
+      responses:
+        200:
+          description: Successful operation
+        500:
+          description: Internal Server Error
+  /api/audit/description/:
+    put:
+      summary: Update description
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: descriptionData
+          description: Description data
+          required: true
+          schema:
+            type: object
+            properties:
+              auditId:
+                type: string
+              description:
+                type: string
+      responses:
+        200:
+          description: Successful operation
+        500:
+          description: Internal Server Error
+  /api/audit/auditorScore/:
+    put:
+      summary: Update auditor score
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: auditorScoreData
+          description: Auditor score data
+          required: true
+          schema:
+            type: object
+            properties:
+              auditId:
+                type: string
+              auditorScore:
+                type: string
+      responses:
+        200:
+          description: Successful operation
+        500:
+          description: Internal Server Error
+  /api/audit/deadline/:
+    put:
+      summary: Update deadline
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: deadlineData
+          description: Deadline data
+          required: true
+          schema:
+            type: object
+            properties:
+              auditId:
+                type: string
+              deadline:
+                type: string
+      responses:
+        200:
+          description: Successful operation
+        500:
+          description: Internal Server Error
